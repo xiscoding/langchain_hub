@@ -210,4 +210,13 @@ Replace `your-project-name` with the name of the project you're looking for.
 * **Project Selection:** Make sure you select the correct project ID that corresponds to the project where you have enabled Vertex AI and where you want to use Gemini 1.5 Pro.
 * **Credentials:** After setting the default project, the `gcloud auth application-default login` command should automatically use the credentials associated with that project. If you encounter any authentication errors, double-check that you've logged in with the correct Google account.
 
-Let me know if you have any other questions or need further assistance!
+**Mark a project for deletion**
+1. In the Google Cloud console, go to the IAM & Admin Settings page.
+* Go to IAM & Admin Settings
+
+2. On the IAM & Admin Settings page, select the project you want to delete, and then click Shut down.
+* Shut down only appears for users who have the resourcemanager.projects.delete permission in the current project.
+
+3. Click Shut down.
+4. Enter the project ID, and then click Shut down anyway.
+* This method immediately marks a project to be deleted. A notification email is sent to the user who initiated the delete operation and the Technical category contacts that are listed in Essential Contacts on a best effort basis; if the notification fails to send, the project is still marked to be deleted. If there's no contact in the Technical category, the fallback contact isn't notified.
