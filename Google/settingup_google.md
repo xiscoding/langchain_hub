@@ -37,6 +37,16 @@ chat = ChatVertexAI(
 response = chat([HumanMessage(content="What's the weather in Blacksburg, Virginia?")])
 print(response.content)
 ```
+- LOCATION: https://cloud.google.com/vertex-ai/docs/general/locations
+- - Columbus, Ohio (us-east5)
+- - Dallas, Texas (us-south1)
+- - Iowa (us-central1)
+- - Las Vegas, Nevada (us-west4)
+- - Los Angeles, California (us-west2)
+- - Moncks Corner, South Carolina (us-east1)
+- - Northern Virginia (us-east4)
+- - Oregon (us-west1)
+- - Salt Lake City, Utah (us-west3)
 
 **Troubleshooting Tips**
 
@@ -137,6 +147,10 @@ Now that you have the Google Cloud SDK installed, you can proceed with the authe
 * If found, it uses these credentials to authenticate your requests to Vertex AI.
 * The beauty of ADC is that you don't need to explicitly pass credentials in your code; it's all handled behind the scenes.
 
+3. **gcloud config**
+   - You will have to select a config (this lets you manage properties gcloud cli uses)
+   - more info: https://cloud.google.com/sdk/gcloud/reference/config
+   - You can also use `gcloud config set` to set a specific property
 **Method 2: Service Account Key File**
 
 **Steps:**
@@ -220,3 +234,7 @@ Replace `your-project-name` with the name of the project you're looking for.
 3. Click Shut down.
 4. Enter the project ID, and then click Shut down anyway.
 * This method immediately marks a project to be deleted. A notification email is sent to the user who initiated the delete operation and the Technical category contacts that are listed in Essential Contacts on a best effort basis; if the notification fails to send, the project is still marked to be deleted. If there's no contact in the Technical category, the fallback contact isn't notified.
+
+**Delete configuration in cli**
+- https://cloud.google.com/sdk/gcloud/reference/config/configurations/delete
+- 'you cannot delete an active configuration'
